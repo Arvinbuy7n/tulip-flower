@@ -21,6 +21,7 @@ body {
   gap: 1rem;
   animation: fadeInMessage 2s ease-out;
   padding-bottom: 16px;
+  line-clamp: 1;
 }
 
 /* Tulip emoji styling */
@@ -62,6 +63,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: flowerFloat 6s ease-in-out infinite;
+}
+
+@keyframes flowerFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
 }
 
 .flower-head {
