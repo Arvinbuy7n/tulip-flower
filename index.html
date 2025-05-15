@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy 18th Birthday Tulip</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="birthday-message">
+    Happy Birthday, Enkhmaa!
+
+    <span class="tulip-emoji" aria-label="tulip" role="img">🌷</span>
+  </div>
+
+  <div class="flower-container" id="flower1">
+    <div class="flower-head" title="Click to change tulip color">
+      <div class="center"></div>
+      <div class="petal petal-1"></div>
+      <div class="petal petal-2"></div>
+      <div class="petal petal-3"></div>
+      <div class="petal petal-4"></div>
+      <div class="petal petal-5"></div>
+      <div class="petal petal-6"></div>
+    </div>
+    <div class="stem">
+      <div class="leaf leaf-1"></div>
+      <div class="leaf leaf-2"></div>
+    </div>
+  </div>
+
+  <div class="wish">Wishing you all the best on your special day and always!</div>
+
+  <div id="messageBox" class="message-box"></div>
+
+  <script>
+    const flower = document.querySelector('#flower1 .flower-head');
+    const petals = flower.querySelectorAll('.petal');
+    const messageBox = document.getElementById('messageBox');
+    const petalColors = ['#E53E3E', '#F6E05E', '#ED8936', '#D53F8C', '#38B2AC', '#805AD5', '#FFFFFF'];
+    let colorIndex = 0;
+
+    flower.addEventListener('click', () => {
+      colorIndex = (colorIndex + 1) % petalColors.length;
+      const newColor = petalColors[colorIndex];
+      flower.classList.add('sparkle');
+      setTimeout(() => flower.classList.remove('sparkle'), 800);
+      petals.forEach(petal => {
+        petal.style.backgroundColor = newColor;
+        petal.style.border = newColor === '#FFFFFF' ? '1px solid #ddd' : 'none';
+      });
+      showMessage(`Tulip color: ${newColor}`);
+    });
+
+    function showMessage(text) {
+      messageBox.textContent = text;
+      messageBox.classList.add('show');
+      setTimeout(() => {
+        messageBox.classList.remove('show');
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
