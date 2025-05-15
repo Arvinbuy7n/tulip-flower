@@ -255,3 +255,102 @@ body {
     transform: scale(1.4);
   }
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .birthday-message {
+    font-size: 2rem;
+    gap: 0.5rem;
+    padding-bottom: 12px;
+  }
+
+  .tulip-emoji {
+    font-size: 2rem;
+  }
+
+  .flower-container {
+    width: 180px;
+    height: 320px;
+  }
+
+  .flower-head {
+    width: 120px;
+    height: 120px;
+  }
+
+  .center {
+    width: 20px;
+    height: 20px;
+  }
+
+  .petal {
+    width: 45px;
+    height: 90px;
+  }
+
+  .stem {
+    width: 12px;
+    height: 160px;
+    margin-top: -14px;
+  }
+
+  .leaf {
+    width: 25px;
+    height: 80px;
+  }
+
+  .wish {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-message {
+    font-size: 1.5rem;
+    gap: 0.3rem;
+    padding-bottom: 10px;
+  }
+
+  .tulip-emoji {
+    font-size: 1.5rem;
+  }
+
+  .flower-container {
+    width: 140px;
+    height: 260px;
+  }
+
+  .flower-head {
+    width: 90px;
+    height: 90px;
+  }
+
+  .center {
+    width: 16px;
+    height: 16px;
+  }
+
+  .petal {
+    width: 35px;
+    height: 70px;
+  }
+
+  .stem {
+    width: 10px;
+    height: 130px;
+    margin-top: -10px;
+  }
+
+  .leaf {
+    width: 20px;
+    height: 65px;
+  }
+
+  .wish {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
